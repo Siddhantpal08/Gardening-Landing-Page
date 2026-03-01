@@ -1,0 +1,132 @@
+.testimonials {
+  padding: 96px 0;
+  background: radial-gradient(circle at top left, #ecfdf3 0, #fefce8 40%, #f9fafb 80%);
+}
+
+.testimonials .container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.testimonials__header {
+  text-align: center;
+}
+
+.testimonials__carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.testimonials__card {
+  max-width: 640px;
+  width: 100%;
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 32px 32px 28px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(22, 163, 74, 0.08);
+  position: relative;
+}
+
+.stars {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  color: #f59e0b;
+}
+
+.testimonial-quote {
+  font-size: 1.05rem;
+  color: var(--clr-text);
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.author-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--clr-green-100);
+  font-size: 1.4rem;
+}
+
+.author-name {
+  font-weight: 600;
+  color: var(--clr-dark);
+}
+
+.author-role {
+  font-size: 0.9rem;
+  color: var(--clr-text-muted);
+}
+
+.carousel-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--clr-text-muted);
+  background: white;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition);
+}
+
+.carousel-btn:hover {
+  border-color: var(--clr-green-400);
+  color: var(--clr-green-700);
+  transform: translateY(-1px);
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(148, 163, 184, 0.4);
+  border: none;
+  padding: 0;
+  transition: all 0.25s ease;
+}
+
+.dot.active {
+  width: 18px;
+  background: var(--clr-green-600);
+}
+
+@media (max-width: 768px) {
+  .testimonials {
+    padding: 72px 0;
+  }
+
+  .testimonials__carousel {
+    gap: 12px;
+  }
+
+  .testimonials__card {
+    padding: 24px 22px 22px;
+  }
+
+  .carousel-btn {
+    display: none;
+  }
+}

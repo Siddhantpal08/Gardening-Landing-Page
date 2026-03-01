@@ -1,0 +1,145 @@
+.about {
+  padding: 96px 0;
+  background: linear-gradient(135deg, #fefce8 0%, #ecfdf3 40%, #f9fafb 100%);
+}
+
+.about__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
+  gap: 40px;
+  align-items: center;
+}
+
+.about__visual {
+  position: relative;
+}
+
+.about__img-main-wrap {
+  border-radius: 32px;
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+  transform: translateY(6px);
+}
+
+.about__img-main {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.02);
+}
+
+.about__img-accent-wrap {
+  position: absolute;
+  right: -12%;
+  bottom: -10%;
+  width: 46%;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.about__img-accent {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about__badge {
+  position: absolute;
+  left: 4%;
+  top: 8%;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: var(--shadow-md);
+}
+
+.badge-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--clr-green-100);
+}
+
+.badge-num {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--clr-text-muted);
+  font-weight: 600;
+}
+
+.badge-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--clr-dark);
+}
+
+.about__text {
+  position: relative;
+}
+
+.about__desc {
+  margin-bottom: 28px;
+  color: var(--clr-text-muted);
+  max-width: 520px;
+}
+
+.about__milestones {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px 20px;
+  margin-bottom: 28px;
+}
+
+.milestone {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.milestone__year {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--clr-green-700);
+}
+
+.milestone__text {
+  font-size: 0.9rem;
+  color: var(--clr-text-muted);
+}
+
+@media (max-width: 960px) {
+  .about__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .about__visual {
+    order: -1;
+  }
+
+  .about__img-accent-wrap {
+    right: 4%;
+    bottom: -8%;
+  }
+}
+
+@media (max-width: 640px) {
+  .about {
+    padding: 72px 0;
+  }
+
+  .about__img-accent-wrap {
+    display: none;
+  }
+
+  .about__milestones {
+    grid-template-columns: 1fr;
+  }
+}
